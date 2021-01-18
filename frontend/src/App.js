@@ -1,8 +1,9 @@
 import './App.css';
+import Login from './pages/Login';
 
 function App() {
   return (
-    <h1>Hellos</h1>
+    <Login />
   );
 }
 
