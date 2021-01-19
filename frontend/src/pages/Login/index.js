@@ -14,7 +14,7 @@ const Login = ({ history }) => {
     });
 
     const { _id } = response.data;
-
+    alert(_id);
     // Redireciona para main
     history.push(`/devs/${_id}`);
 }

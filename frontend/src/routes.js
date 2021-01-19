@@ -1,12 +1,14 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { Login, Dev } from './pages';
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-const Rotas = () => (
-  <Switch>
-    <Route exact path='/' component={Login}/>
-    <Route path='/dev/:id' component={Dev}/>
-  </Switch>
-);
+import Login from './pages/Login.js'
+import Main from './pages/Main.js'
 
-export default Rotas;
+export default function Routes() {
+    return (
+        <BrowserRouter>
+            <Route path="/" exact component={Login} />
+            <Route path="/dev/:id" component={Main} />
+        </BrowserRouter>
+    )
+}

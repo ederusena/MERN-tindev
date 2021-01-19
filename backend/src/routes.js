@@ -1,12 +1,13 @@
-const express = require('express');
-const DevController = require('./controllers/DevController');
-const LikeController = require('./controllers/LikeController');
-const DislikeController = require('./controllers/DislikeController');
+const express = require('express')
+const DevController = require('./controllers/Dev.js')
+const LikeController = require('./controllers/Likes.js')
+const DislikeController = require('./controllers/Dislikes.js')
 
-const routes = express.Router();
+const routes = express.Router()
 
-routes.post('/devs', DevController.store);
-routes.post('/devs/:id/likes', LikeController.store);
-routes.post('/devs/:id/dislikes', DislikeController.store);
+routes.get('/devs', DevController.index)
+routes.post('/devs', DevController.store)
+routes.post('/devs/:devId/likes', LikeController.store)
+routes.post('/devs/:devId/dislikes', DislikeController.store)
 
-module.exports = routes;
+module.exports = routes

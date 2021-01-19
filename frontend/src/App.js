@@ -1,11 +1,12 @@
+import React from 'react';
 import './App.css';
-import Rotas from './routes';
-import { BrowserRouter } from 'react-router-dom';
 
-const App = () => (
-  <BrowserRouter>
-    <Rotas />
-  </BrowserRouter>
-);
+import Routes from './routes.js'
+
+function App() {
+  return (
+    <Routes />
+  );
+}
 
 export default App;
