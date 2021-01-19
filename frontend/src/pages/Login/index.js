@@ -9,14 +9,14 @@ const Login = ({ history }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await api.post('/dev',{
+    const response = await api.post('/devs',{
       username,
     });
 
     const { _id } = response.data;
 
     // Redireciona para main
-    history.push(`/dev/${_id}`);
+    history.push(`/devs/${_id}`);
 }
 
   return (
